@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correção</title>
+</head>
+<body>
+    <h1>Correção</h1>
+
+    <label for="txtnome">Digite seu nome:</label>
+    <input type="text" name="txtnome" id="txtnome">
+<br><br>
+    <label for="txtidade">Idade:</label>
+    <input type="number" name="txtidade" id="txtidade">
+
+    <button onclick="verificar()">Verificar</button>
+    
+    <div id="resultado"></div>
+
+    <script>
+        function verificar(){
+            //Pegar o nome
+         let nome = document.getElementById('txtnome').value
+
+         let idade = document.getElementById('txtidade').value
+
+         let resposta = document.getElementById('resultado')
+
+         //if/else
+
+         if(idade<18){
+            //se true/verdade
+            resposta.innerText= `O(a) ${nome} é menor de idade.`
+         }else{
+            //se for falso
+            resposta.innerText=`O (a) ${nome} é maior de idade.`
+         }
+        }
+
+    </script>
+</body>
+</html>

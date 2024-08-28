@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Funções e eventos</h1>
+
+    <label for="entradaDeMouse">Entrada do mouse </label>
+    <input type="text" id="entradaDeMouse" onmouseenter="entradadeMouse()">
+    <br><br>
+    <label for="mudancaValor">Mudança de valor</label>
+    <input type="text" id="mudancaValor" onchange="mudancaValor()">
+    <br><br>
+
+    <label for="saidadeFoco">Saída de foco</label>
+    <input type="text" id="saidadeFoco" onblur="saidaFoco()">
+    <br><br>
+
+    <label for="entradaDeFoco">Entrada de Foco:</label>
+    <input type="text" id="entradaDeFoco" onfocus="entradaFoco()">
+
+    <br><br>
+    <button onclick="clicar()">Clique aqui</button>
+
+    <script src="index.js">
+
+    </script>
+</body>
+
+</html>
