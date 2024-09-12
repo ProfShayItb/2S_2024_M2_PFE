@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .para2{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Revisão de conceitos</h1>
+    <p id="para1" class="paragrafo">Parágrafo 1</p>
+    <button id="botao">Botão</button>
+    <button id="testetoggle">Parágrafo 2</button>
+
+        <p id="oculto">Parágrafo oculto.</p>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script> 
+        //Selecionando elemento
+
+    //   var p =  document.getElementsByTagName('p')[0]
+
+        $('p').css('color', '#ff00ff') //tag
+        $('#para1').css('backgroundColor','#000')//Selecionando por id
+        $('.paragrafo').css('textAlign', 'center')//Selecionando por classe
+
+        //Função
+
+        $('#botao').click(function(){
+            alert('Botão acionado')
+        })
+
+        //Declaração jQuery
+        //funçãoJquery seletor ação parâmetros
+
+        //Função addClass() - adiciona um a classe css a um elemento, porém ele deve estar contido no css
+
+        // $(document).ready(function(){
+        //     $('span').addClass('para2')
+        // })
+
+        //Função ToggleClass() - permite remover ou adicionar classe Css com condição
+        $(document).ready(function(){
+           $('#testetoggle').click(function(){
+            $(this).toggleClass('para2')
+           })
+        })
+
+        //Função anônima
+        //function (){}
+        // ()=>{}
+
+        //Função hide() - esconde / esconde um elemento
+
+        $('#oculto').click(function(){
+            $(this).hide()
+        })
+
+
+        //Função show() - oposto do hide 
+
+        $('#oculto').click(function(){
+            $(this).show()
+        })
+    </script>
+
+</body>
+</html>
