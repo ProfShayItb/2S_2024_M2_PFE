@@ -30,10 +30,29 @@
       
     </select>
 
+    <h2>Digite seu nome:</h2>
+    <input type="text" id="nome">
+
+    <div id="exibe"></div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script>
+
+      //Evento Keypress - monitora quando uma tecla é pressionada e assim realizar um tipo de ação.
+      $(document). ready(function(){
+        $('#nome').keypress(function(evento){
+          $('#exibe').append(`Código ascII digitado ${evento.keyCode}`)
+        })
+      })
+
+
       //toggleClass - Adicionando ou removendo classe
+      $(document).ready(function(){
+        $("#modelos").change(function(){
+          $("#photo").attr('src', $(this).val())
+          $('#photo').show()
+        })
       $(document).ready(function(){
         $('#button').click(function(){
           $('body').toggleClass('escuro')
@@ -49,6 +68,8 @@
           $('#photo').mouseout(function(){
             $(this).attr('width', 500)
           })
+        })
+
         })
     </script>
 
